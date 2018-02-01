@@ -16,9 +16,14 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from base.views import ErrorHandler
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^app_1/', include('app_1.urls', namespace='app_1')),
     url(r'^app_2/', include('app_2.urls', namespace='app_2')),
 ]
+
+
+handler500 = lambda request: ErrorHandler.as_view()(request)
