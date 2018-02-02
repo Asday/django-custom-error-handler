@@ -8,6 +8,7 @@ This repo was produced as an answer to [this question](https://stackoverflow.com
 git clone git@github.com:Asday/django-custom-error-handler.git
 cd django-custom-error-handler
 mkvirtualenv --python=$(which python3.6) django-custom-error-handler
+pip install -r requirements.txt
 python manage.py runserver 0.0.0.0:8000
 ```
 
